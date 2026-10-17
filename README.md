@@ -47,5 +47,6 @@ logs; failures are `exit 1`; everything runs on `ubuntu-latest`. Sleeps appear o
 | 21 | `skip-ci` | `on: [push, workflow_dispatch]` | A `[skip ci]` commit starts no push run at all; `workflow_dispatch` on that commit still works |
 
 The pushes that exercise the triggers, in order: the initial commit (workflows and README only), a `docs/`-only
-commit, a `src/`-only commit, a `[skip ci]` commit, the tag `v0.0.1`, then a pull request that is labeled `probe`,
-and `workflow_dispatch` of `case-unknown-or-true` and `case-skip-ci`.
+commit, a `src/`-only commit, the tag `v0.0.1` on that commit, a `[skip ci]` commit followed by `workflow_dispatch`
+of `case-skip-ci` and `case-unknown-or-true`, then a branch `probe/pr` opened as a pull request and labeled `probe`.
+The capture in simulci (`fixtures/routes-lab/README.md`) lists the commits and what each push started.
