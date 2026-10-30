@@ -9,3 +9,5 @@ jobs:
     steps:
       - name: remote action
         uses: ciatlas/simulci-lab-remote/.github/actions/r9-action@v1
+      - name: unlisted remote action
+        uses: ciatlas/simulci-lab-remote/.github/actions/r9-action@main
