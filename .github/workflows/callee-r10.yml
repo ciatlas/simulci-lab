@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: probe
-        run: 'echo "probe: r10-copy=main"'
+        run: 'echo "probe: r10-copy=branch"'
